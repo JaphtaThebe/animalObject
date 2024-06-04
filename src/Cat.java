@@ -11,15 +11,15 @@ public class Cat implements Animal {
         System.out.println(this.name);
         System.out.println(this.age);
     }*/
-    public Cat(){
-        this.name = "Laura";
+    public Cat(){//Constructor with empty args
+        this.name = "Laura";// this refers to the current instance of Cat
         this.age = 5;
-        System.out.println("Constructor with empty args");
+        System.out.println();
     }
-    public Cat(String name,int age){
+    public Cat(String name,int age){//Constructor with 2 args
         this.name = name;
         this.age = age;
-        System.out.println("Constructor with 2 args");
+        System.out.println();
     }
 
 
@@ -41,13 +41,7 @@ public class Cat implements Animal {
         this.age = age;
     }
 
-    @Override
-    public String toString() {//overridden toString method to return a string representation of object cat
-        return "cat{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
+
 
     @Override
     public void makeNoise() {
@@ -56,7 +50,16 @@ public class Cat implements Animal {
 
     @Override
     public void poop() {
-        System.out.println("Poop the hide");
+        System.out.println("Poop then hide");
     }
-
+    @Override
+    public String toString() {//overridden toString method to return a string representation of object cat
+        return "cat{" +
+                "name='" + this.name + '\'' +
+                ", age=" + this.age +
+                '}';
+    }
+   /* public String toString() {
+        return "name = " + name + "" + "age = " + age;
+    }*/
 }
